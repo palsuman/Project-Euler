@@ -9,6 +9,9 @@ import org.junit.Before;
  */
 public abstract class EulerTest {
 
+	/** The Constant TIME_OUT. */
+	protected final static int TIME_OUT = 60000;
+	
 	/** The euler problem. */
 	protected EulerProblem eulerProblem;
 

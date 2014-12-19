@@ -17,16 +17,16 @@ import com.suman.euler.problem.EulerTest;
  *
  * @version $Revision$
  */
-public class Problem001Test extends EulerTest {
+public class Problem002Test extends EulerTest {
 	
 	/** The expected. */
-	private final int expected = 233168;
+	private final int expected = 4613732;
 
 	/**
 	 * Construct new test instance.
 	 */
-	public Problem001Test() {
-		super(new Problem001());
+	public Problem002Test() {
+		super(new Problem002());
 	}
 
 	/**
