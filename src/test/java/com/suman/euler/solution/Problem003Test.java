@@ -8,7 +8,8 @@ import com.suman.euler.problem.EulerTest;
 
 // TODO: Auto-generated Javadoc
 /**
- * The class <code>Problem003Test</code> contains tests for the class {@link <code>Problem003</code>}.
+ * The class <code>Problem003Test</code> contains tests for the class {@link <code>Problem003</code>}
+ * .
  *
  * @author icteas
  * @version $Revision$
@@ -16,7 +17,7 @@ import com.suman.euler.problem.EulerTest;
  * @generatedBy CodePro at 19/12/14 2:40 PM
  */
 public class Problem003Test extends EulerTest {
-	
+
 	/** The expected. */
 	private final long expected = 6857L;
 
@@ -30,7 +31,7 @@ public class Problem003Test extends EulerTest {
 	/**
 	 * Run the Object executeSoultion() method test.
 	 */
-	@Test
+	@Test(timeout = TIME_OUT)
 	public void testExecuteSoultion() {
 		long actual = (long) eulerProblem.executeSoultion();
 		System.out.println("result: " + actual);

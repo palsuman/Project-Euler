@@ -136,7 +136,7 @@ public class Function {
 		if (startRange % 2L == 0) {
 			offset = 1L;
 		}
-		for (long number = startRange + offset; number <= endRange; number++) {
+		for (long number = startRange + offset; number <= endRange; number += 2) {
 			boolean prime = true;
 			for (int index = 2; index <= Math.sqrt(number); index++) {
 				if (number % index == 0) {
