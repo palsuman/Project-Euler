@@ -1,4 +1,4 @@
 Project-Euler
 =============
 
-The solve of Project Euler problems
+The solution of Project Euler's problems
