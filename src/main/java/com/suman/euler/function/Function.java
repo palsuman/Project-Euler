@@ -56,4 +56,32 @@ public class Function {
 		}
 		return odd;
 	}
+
+	/**
+	 * Gets the prime sequence.
+	 *
+	 * @param maximum
+	 *            the maximum prime number of the prime sequence
+	 * @return the prime sequence
+	 */
+	public static List<Long> getPrimeSequence(long maximum) {
+		List<Long> primeSequence = new ArrayList<>();
+		List<Long> oddNumberSequence = new ArrayList<>();
+		primeSequence.add(2L);
+		for (long index = 3L; index < maximum; index += 2) {
+			oddNumberSequence.add(index);
+		}
+		while (oddNumberSequence.size() != 0) {
+			long expectedPrimeNumber = oddNumberSequence.remove(0);
+			List<Long> workingNaturalNumberSequence = new ArrayList<>(oddNumberSequence);
+			for (long number : workingNaturalNumberSequence) {
+				if (number % expectedPrimeNumber == 0) {
+					oddNumberSequence.remove(number);
+				}
+			}
+			primeSequence.add(expectedPrimeNumber);
+		}
+		return primeSequence;
+	}
+
 }
