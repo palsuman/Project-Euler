@@ -11,7 +11,7 @@ public abstract class EulerTest {
 
 	/** The Constant TIME_OUT. */
 	protected final static int TIME_OUT = 60000;
-	
+
 	/** The euler problem. */
 	protected EulerProblem eulerProblem;
 
@@ -40,6 +40,7 @@ public abstract class EulerTest {
 	public void tearDown() {
 		this.endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
-		System.out.println("Total exceution time: " + totalTime + " ms");
+		System.out.println("Total exceution time: " + totalTime / 1000.0
+				+ " sec");
 	}
 }
