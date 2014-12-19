@@ -6,13 +6,20 @@
  * all the multiples of 3 or 5 below 1000.
  */
 
-package com.human.euler.solution;
+package com.suman.euler.solution;
 
-import com.human.euler.problem.EulerProblem;
+import com.suman.euler.problem.EulerProblem;
 
 public class Problem001 implements EulerProblem {
 
-	public void executeSoultion() {
-		
+	public Object executeSoultion() {
+		int maxNumber = 1000;
+		int sum = 0;
+		for (int number = 3; number < maxNumber; number++) {
+			if((number % 3 == 0) || (number % 5 == 0)){
+				sum += number;
+			}
+		}
+		return sum;
 	}
 }
