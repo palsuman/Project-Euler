@@ -96,13 +96,17 @@ public class Function {
 	 */
 	public static boolean isPrime(long number) {
 		boolean prime = true;
-		for (long index = 2; index <= Math.sqrt(number); index++) {
-			if (number % index == 0) {
-				prime = false;
-				break;
+		if ((number == 1) && (number % 2 == 0)) {
+			prime = false;
+		} else {
+			double maxFactor = Math.floor(Math.sqrt(number));
+			for (long factor = 3; factor <= maxFactor; factor += 2) {
+				if (number % factor == 0) {
+					prime = false;
+					break;
+				}
 			}
 		}
-
 		return prime;
 	}
 
@@ -137,14 +141,7 @@ public class Function {
 			offset = 1L;
 		}
 		for (long number = startRange + offset; number <= endRange; number += 2) {
-			boolean prime = true;
-			for (int index = 2; index <= Math.sqrt(number); index++) {
-				if (number % index == 0) {
-					prime = false;
-					break;
-				}
-			}
-			if (prime) {
+			if (isPrime(number)) {
 				primeSequence.add(number);
 			}
 		}
@@ -253,7 +250,7 @@ public class Function {
 	public static long sumOfTheNaturalNumbers(long number) {
 		return ((number * (number + 1)) / 2);
 	}
-	
+
 	/**
 	 * The sum of the square of the first n natural numbers, Sn, is:
 	 * 
@@ -266,5 +263,5 @@ public class Function {
 	public static long sumOfTheSquareOfTheNaturalNumbers(long number) {
 		return ((number * (number + 1) * ((number * 2) + 1)) / 6);
 	}
-	
+
 }
