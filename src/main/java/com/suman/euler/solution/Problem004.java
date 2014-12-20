@@ -8,10 +8,6 @@
 
 package com.suman.euler.solution;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import com.suman.euler.function.Function;
 import com.suman.euler.problem.EulerProblem;
 
@@ -21,18 +17,18 @@ public class Problem004 implements EulerProblem {
 	 * @see com.suman.euler.problem.EulerProblem#executeSoultion()
 	 */
 	public Object executeSoultion() {
-		List<Long> possiblePalindromeProduct = new ArrayList<>();
+		long possiblePalindromeProduct = 0L;
 		for (long firstNumber = 999L; firstNumber > 99L; firstNumber--) {
 			for (long secondNumber = firstNumber; secondNumber > 99L; secondNumber--) {
 				long palindromeProduct = secondNumber * firstNumber;
 				if (Function.isPalindrome(palindromeProduct)) {
-					possiblePalindromeProduct.add(palindromeProduct);
+					if(palindromeProduct > possiblePalindromeProduct){
+						possiblePalindromeProduct = palindromeProduct;
+					}
 				}
 			}
 		}
-		Collections.sort(possiblePalindromeProduct);
-		int index = possiblePalindromeProduct.size() - 1;
-		return possiblePalindromeProduct.get(index);
+		return possiblePalindromeProduct;
 	}
 	
 }
