@@ -20,6 +20,8 @@ public abstract class EulerTest {
 
 	/** The end time. */
 	private long endTime;
+	
+	protected Object result;
 
 	/**
 	 * Instantiates a new euler test.
@@ -40,6 +42,7 @@ public abstract class EulerTest {
 	public void tearDown() {
 		this.endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
+		System.out.println("Problem: " + this.eulerProblem.getClass().getSimpleName() + "\tResult: " + result);
 		System.out.println("Total exceution time: " + totalTime / 1000.0
 				+ " sec");
 	}

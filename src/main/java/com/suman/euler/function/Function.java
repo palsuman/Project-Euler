@@ -151,4 +151,120 @@ public class Function {
 		return primeSequence;
 	}
 
+	/**
+	 * Check the string is palindrome or not
+	 * 
+	 * @param input
+	 *            the string to be checked
+	 * @return true if palindrome or false if not
+	 */
+	public static boolean isPalindrome(String input) {
+		int inputLength = input.length();
+		if (inputLength == 0 || inputLength == 1) {
+			return true;
+		} else if (input.charAt(0) == input.charAt(inputLength - 1)) {
+			return isPalindrome(input.substring(1, inputLength - 1));
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Check the number is palindrome or not
+	 * 
+	 * @param input
+	 *            the number to be checked
+	 * @return true if palindrome or false if not
+	 */
+	public static boolean isPalindrome(long input) {
+		return isPalindrome(String.valueOf(input));
+	}
+
+	/**
+	 * Get GCD of two numbers
+	 * 
+	 * @param numberOne
+	 *            the number one
+	 * @param numberTwo
+	 *            the number two
+	 * @return the GCD
+	 */
+	public static long getGCD(long numberOne, long numberTwo) {
+		while (numberTwo > 0) {
+			long container = numberTwo;
+			numberTwo = numberOne % numberTwo; // % is remainder
+			numberOne = container;
+		}
+		return numberOne;
+	}
+
+	/**
+	 * Get GCD of array of numbers
+	 * 
+	 * @param input
+	 *            the array number
+	 * @return the GCD
+	 */
+	public static long getGCD(List<Long> input) {
+		long result = input.get(0);
+		for (int index = 1; index < input.size(); index++) {
+			result = getGCD(result, input.get(index));
+		}
+		return result;
+	}
+
+	/**
+	 * Get LCM of two numbers
+	 * 
+	 * @param numberOne
+	 *            the number one
+	 * @param numberTwo
+	 *            the number two
+	 * @return the LCM
+	 */
+	public static long getLCM(long numberOne, long numberTwo) {
+		return numberOne * (numberTwo / getGCD(numberOne, numberTwo));
+	}
+
+	/**
+	 * Get LCM of array of numbers
+	 * 
+	 * @param input
+	 *            the array number
+	 * @return the LCM
+	 */
+	public static long getLCM(List<Long> input) {
+		long result = input.get(0);
+		for (int index = 1; index < input.size(); index++) {
+			result = getLCM(result, input.get(index));
+		}
+		return result;
+	}
+
+	/**
+	 * The sum of the first n natural numbers, Sn, is:
+	 * 
+	 * S<sub>n</sub> = n(n+1) / 2
+	 * 
+	 * @param number
+	 *            the n<sup>th</sup> number
+	 * @return the sum of n natural numbers
+	 */
+	public static long sumOfTheNaturalNumbers(long number) {
+		return ((number * (number + 1)) / 2);
+	}
+	
+	/**
+	 * The sum of the square of the first n natural numbers, Sn, is:
+	 * 
+	 * S<sub>n</sub><sup>2</sup> = n(n+1)(2n+1) / 6
+	 * 
+	 * @param number
+	 *            the n<sup>th</sup> number
+	 * @return the sum of n natural numbers
+	 */
+	public static long sumOfTheSquareOfTheNaturalNumbers(long number) {
+		return ((number * (number + 1) * ((number * 2) + 1)) / 6);
+	}
+	
 }

@@ -34,7 +34,7 @@ public class Problem003Test extends EulerTest {
 	@Test(timeout = TIME_OUT)
 	public void testExecuteSoultion() {
 		long actual = (long) eulerProblem.executeSoultion();
-		System.out.println("result: " + actual);
+		this.result = actual;
 		assertEquals(expected, actual);
 	}
 
