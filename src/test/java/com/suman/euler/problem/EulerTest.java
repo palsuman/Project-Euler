@@ -35,7 +35,6 @@ public abstract class EulerTest {
 
 	@Before
 	public void setUp() {
-		System.out.println();
 		this.startTime = System.currentTimeMillis();
 	}
 
