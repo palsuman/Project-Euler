@@ -19,8 +19,8 @@ public class Problem007 implements EulerProblem {
 	public Object executeSoultion() {
 		long nthNumber = 10001;
 		long primeNumber = 1;
-		while(nthNumber > 1){
-			if(Function.isPrime(++primeNumber)){
+		while (nthNumber > 0) {
+			if (Function.isPrime(++primeNumber)) {
 				--nthNumber;
 			}
 		}

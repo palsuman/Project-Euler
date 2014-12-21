@@ -96,7 +96,7 @@ public class Function {
 	 */
 	public static boolean isPrime(long number) {
 		boolean prime = true;
-		if ((number == 1) && (number % 2 == 0)) {
+		if ((number <= 1) || (number != 2 && (number % 2 == 0))) {
 			prime = false;
 		} else {
 			double maxFactor = Math.floor(Math.sqrt(number));
