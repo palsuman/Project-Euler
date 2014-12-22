@@ -374,8 +374,4 @@ public class Problem011 implements EulerProblem {
 		}
 	}
 
-	public static void main(String[] args) {
-		Problem011 problem = new Problem011();
-		problem.executeSoultion();
-	}
 }
