@@ -19,7 +19,7 @@ import com.suman.euler.problem.EulerTest;
 public class Problem011Test extends EulerTest {
 
 	/** The expected. */
-	private final long expected = 104743L;
+	private final long expected = 70600674L;
 
 	/**
 	 * Construct new test instance.
