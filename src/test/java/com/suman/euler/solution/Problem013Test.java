@@ -18,7 +18,7 @@ import com.suman.euler.problem.EulerTest;
 public class Problem013Test extends EulerTest {
 	
 	/** The expected. */
-	private final String expected = "1234567890";
+	private final String expected = "5537376230";
 
 	/**
 	 * Construct new test instance.

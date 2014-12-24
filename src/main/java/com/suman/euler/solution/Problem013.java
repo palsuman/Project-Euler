@@ -121,7 +121,6 @@ public class Problem013 implements EulerProblem {
 		for(int index=0;index<numbers.length;index++){
 			total = total.add(numbers[index]);
 		}
-		System.out.println(total);
 		return total.toString().substring(0,10);
 	}
 	
