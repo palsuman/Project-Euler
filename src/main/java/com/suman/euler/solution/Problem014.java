@@ -21,6 +21,9 @@
 
 package com.suman.euler.solution;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.suman.euler.problem.EulerProblem;
 
 public class Problem014 implements EulerProblem {
@@ -49,7 +52,6 @@ public class Problem014 implements EulerProblem {
 					terms += collatzTerms[(int)collatzNo];
 					collatzNo = 1;
 				}
-				
 			}
 			if(infinite){
 				continue;
