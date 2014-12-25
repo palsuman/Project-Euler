@@ -8,7 +8,7 @@ import com.suman.euler.problem.EulerTest;
 
 // TODO: Auto-generated Javadoc
 /**
- * The class <code>Problem007Test</code> contains tests for the class {@link <code>Problem007</code>}
+ * The class <code>Problem014Test</code> contains tests for the class {@link <code>Problem014</code>}
  * .
  *
  * @author icteas

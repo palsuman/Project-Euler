@@ -75,6 +75,7 @@ public class Problem014 implements EulerProblem {
 	private long forEvenCollatz(long number){
 		return number/2;
 	}
+	
 	private long forOddCollatz(long number){
 		return ((3*number)+1);
 	}
