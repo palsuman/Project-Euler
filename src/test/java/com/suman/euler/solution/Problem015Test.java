@@ -19,7 +19,7 @@ import com.suman.euler.problem.EulerTest;
 public class Problem015Test extends EulerTest {
 
 	/** The expected. */
-	private final int expected = 837799;
+	private final String expected = "137846528820";
 
 	/**
 	 * Construct new test instance.
@@ -33,7 +33,7 @@ public class Problem015Test extends EulerTest {
 	 */
 	@Test(timeout = TIME_OUT)
 	public void testExecuteSoultion() {
-		int actual = (int) eulerProblem.executeSoultion();
+		String actual = (String) eulerProblem.executeSoultion();
 		this.result = actual;
 		assertEquals(expected, actual);
 	}

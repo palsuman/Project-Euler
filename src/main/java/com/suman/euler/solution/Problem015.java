@@ -9,6 +9,9 @@
 
 package com.suman.euler.solution;
 
+import java.math.BigInteger;
+
+import com.suman.euler.function.Function;
 import com.suman.euler.problem.EulerProblem;
 
 public class Problem015 implements EulerProblem {
@@ -17,6 +20,10 @@ public class Problem015 implements EulerProblem {
 	 * @see com.suman.euler.problem.EulerProblem#executeSoultion()
 	 */
 	public Object executeSoultion() {
-		return null;
+		int gridSize = 20;
+		int rowSize = 2 * gridSize;
+		BigInteger latticePath = Function.getCombinations(
+				BigInteger.valueOf(rowSize), BigInteger.valueOf(gridSize));
+		return latticePath.toString();
 	}
 }

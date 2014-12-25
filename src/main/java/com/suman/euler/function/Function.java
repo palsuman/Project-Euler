@@ -1,5 +1,6 @@
 package com.suman.euler.function;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -264,4 +265,36 @@ public class Function {
 		return ((number * (number + 1) * ((number * 2) + 1)) / 6);
 	}
 
+	/**
+	 * To get the combination of 'r' numbers from 'n' numbers, in mathematics
+	 * the equation is: nCr
+	 * 
+	 * @param n
+	 *            the n numbers
+	 * @param r
+	 *            the r numbers from n
+	 * @return the combination of nCr
+	 */
+	public static BigInteger getCombinations(BigInteger n, BigInteger r) {
+		return getFactorial(n).divide(
+				getFactorial(r).multiply(getFactorial(n.subtract(r))));
+		
+	}
+
+	/**
+	 * To get the factorial of a number
+	 * 
+	 * @param number
+	 *            the number to be calculated
+	 * @return the factorial of the number
+	 */
+	public static BigInteger getFactorial(BigInteger number) {
+		BigInteger factorial = BigInteger.ONE;
+		while (number.compareTo(BigInteger.ONE) == 1) {
+			factorial = factorial.multiply(number);
+			number = number.subtract(BigInteger.ONE);
+		}
+		return factorial;
+	}
+	
 }
