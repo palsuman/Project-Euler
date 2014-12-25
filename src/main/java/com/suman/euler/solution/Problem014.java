@@ -21,16 +21,62 @@
 
 package com.suman.euler.solution;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.suman.euler.problem.EulerProblem;
 
 public class Problem014 implements EulerProblem {
 
+	private final int COLLATZ_RANGE = 1000000;
 	/**
 	 * @see com.suman.euler.problem.EulerProblem#executeSoultion()
 	 */
 	public Object executeSoultion() {
-
-		return null;
+		int[] collatzTerms = new int[COLLATZ_RANGE];
+		int maxTerms = 1;
+		int finalCollatzNo = 2;
+		collatzTerms[2] = 1;
+		for(int index = 3; index < COLLATZ_RANGE; index++){
+			long collatzNo = index;
+			int terms = 0;
+			Set<Long> occurence = new HashSet<>();
+			boolean infinite = false;
+			while(collatzNo != 1){
+				occurence.add(collatzNo);
+				if(collatzNo % 2 == 0){
+					collatzNo = forEvenCollatz(collatzNo);
+				} else {
+					collatzNo = forOddCollatz(collatzNo);
+				}
+				++terms;
+				if(collatzNo < COLLATZ_RANGE && collatzTerms[(int)collatzNo] != 0){
+					terms += collatzTerms[(int)collatzNo];
+					collatzNo = 1;
+				}
+				if(occurence.contains(collatzNo)){
+					infinite = true;
+					break;
+				}
+				
+			}
+			if(infinite){
+				continue;
+			}
+			collatzTerms[index] = terms;
+			if(terms > maxTerms) {
+				maxTerms = terms;
+				finalCollatzNo = index;
+			}
+		}
+		return finalCollatzNo;
 	}
 
+	private long forEvenCollatz(long number){
+		return number/2;
+	}
+	
+	private long forOddCollatz(long number){
+		return ((3*number)+1);
+	}
 }
