@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class CreateProblemAndTestClass {
-	private static final String PROBLEM_NO = "022";
+	private static final String PROBLEM_NO = "023";
 
 	public static void main(String[] args) {
 		try {

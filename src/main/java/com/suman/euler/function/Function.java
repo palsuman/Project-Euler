@@ -311,7 +311,7 @@ public class Function {
 			// Checking proper divisible or not
 			if (number % index == 0) {
 				if (properDivisor.contains(index)) {
-					break;
+					continue;	
 				}
 				properDivisor.add(index);
 				int another = number / index;
@@ -352,7 +352,7 @@ public class Function {
 		}
 		return sum;
 	}
-	
+
 	/**
 	 * Check the number is abundant or not
 	 * 
@@ -364,12 +364,12 @@ public class Function {
 		boolean status = false;
 		List<Integer> divisor = getProperDivisors(number);
 		int sumOfDivisor = getSumOfIntegerNumbers(divisor);
-		if(sumOfDivisor > number){
+		if (sumOfDivisor > number) {
 			status = true;
 		}
 		return status;
 	}
-	
+
 	/**
 	 * Check the number is perfect number or not
 	 * 
@@ -381,12 +381,12 @@ public class Function {
 		boolean status = false;
 		List<Integer> divisor = getProperDivisors(number);
 		int sumOfDivisor = getSumOfIntegerNumbers(divisor);
-		if(sumOfDivisor == number){
+		if (sumOfDivisor == number) {
 			status = true;
 		}
 		return status;
 	}
-	
+
 	/**
 	 * Check the number is deficient number or not
 	 * 
@@ -398,7 +398,7 @@ public class Function {
 		boolean status = false;
 		List<Integer> divisor = getProperDivisors(number);
 		int sumOfDivisor = getSumOfIntegerNumbers(divisor);
-		if(sumOfDivisor < number){
+		if (sumOfDivisor < number) {
 			status = true;
 		}
 		return status;
