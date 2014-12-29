@@ -360,9 +360,47 @@ public class Function {
 	 *            the number to be checked
 	 * @return true if number is abundant, false otherwise
 	 */
-	public static boolean isAbundantNumber(long number) {
+	public static boolean isAbundantNumber(int number) {
 		boolean status = false;
+		List<Integer> divisor = getProperDivisors(number);
+		int sumOfDivisor = getSumOfIntegerNumbers(divisor);
+		if(sumOfDivisor > number){
+			status = true;
+		}
 		return status;
 	}
 	
+	/**
+	 * Check the number is perfect number or not
+	 * 
+	 * @param number
+	 *            the number to be checked
+	 * @return true if number is perfect number, false otherwise
+	 */
+	public static boolean isPerfectNumber(int number) {
+		boolean status = false;
+		List<Integer> divisor = getProperDivisors(number);
+		int sumOfDivisor = getSumOfIntegerNumbers(divisor);
+		if(sumOfDivisor == number){
+			status = true;
+		}
+		return status;
+	}
+	
+	/**
+	 * Check the number is deficient number or not
+	 * 
+	 * @param number
+	 *            the number to be checked
+	 * @return true if number is deficient number, false otherwise
+	 */
+	public static boolean isDeficientNumber(int number) {
+		boolean status = false;
+		List<Integer> divisor = getProperDivisors(number);
+		int sumOfDivisor = getSumOfIntegerNumbers(divisor);
+		if(sumOfDivisor < number){
+			status = true;
+		}
+		return status;
+	}
 }
