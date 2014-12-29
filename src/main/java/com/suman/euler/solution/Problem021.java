@@ -42,6 +42,7 @@ public class Problem021 implements EulerProblem {
 				sumOfAmicableNumbers += number + amicableNo;
 			}
 		}
+		
 		return sumOfAmicableNumbers;
 	}
 
