@@ -8,7 +8,7 @@ import com.suman.euler.problem.EulerTest;
 
 // TODO: Auto-generated Javadoc
 /**
- * The class <code>Problem017Test</code> contains tests for the class {@link <code>Problem017</code>}
+ * The class <code>Problem019Test</code> contains tests for the class {@link <code>Problem019</code>}
  * .
  *
  * @author icteas
@@ -16,16 +16,16 @@ import com.suman.euler.problem.EulerTest;
  * @pattern JUnit Test Case
  * @generatedBy CodePro at 19/12/14 2:40 PM
  */
-public class Problem017Test extends EulerTest {
+public class Problem019Test extends EulerTest {
 
 	/** The expected. */
-	private final long expected = 21124L;
+	private final long expected = 171L;
 
 	/**
 	 * Construct new test instance.
 	 */
-	public Problem017Test() {
-		super(new Problem017());
+	public Problem019Test() {
+		super(new Problem019());
 	}
 
 	/**
