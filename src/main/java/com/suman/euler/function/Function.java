@@ -297,4 +297,27 @@ public class Function {
 		return factorial;
 	}
 	
+	/**
+	 * Get the list of proper divisor
+	 * @param number the number
+	 * @return the list of proper divisor
+	 */
+	public static List<Integer> getProperDivisors(int number) {
+		int limit = (int) Math.floor(Math.sqrt(number));
+		List<Integer> properDivisor = new ArrayList<>(limit);
+		for (int index = 1; index <= limit; index++) {
+			// Checking proper divisible or not
+			if (number % index == 0) {
+				if (properDivisor.contains(index)) {
+					break;
+				}
+				properDivisor.add(index);
+				int another = number / index;
+				if (another != number) {
+					properDivisor.add(another);
+				}
+			}
+		}
+		return properDivisor;
+	}
 }

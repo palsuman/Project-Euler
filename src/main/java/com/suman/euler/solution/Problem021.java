@@ -14,9 +14,9 @@
 
 package com.suman.euler.solution;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import com.suman.euler.function.Function;
 import com.suman.euler.problem.EulerProblem;
 
 public class Problem021 implements EulerProblem {
@@ -32,9 +32,9 @@ public class Problem021 implements EulerProblem {
 			if (amicableNumbers[number] == true) {
 				continue;
 			}
-			List<Integer> properDivisor = getProperDivisors(number);
+			List<Integer> properDivisor = Function.getProperDivisors(number);
 			int amicableNo = getSumOfNumbers(properDivisor);
-			properDivisor = getProperDivisors(amicableNo);
+			properDivisor = Function.getProperDivisors(amicableNo);
 			int sumOfDivisors = getSumOfNumbers(properDivisor);
 			if (sumOfDivisors == number && amicableNo != number) {
 				amicableNumbers[number] = true;
@@ -53,22 +53,4 @@ public class Problem021 implements EulerProblem {
 		return sum;
 	}
 
-	private List<Integer> getProperDivisors(int number) {
-		int limit = (int) Math.floor(Math.sqrt(number));
-		List<Integer> properDivisor = new ArrayList<>(limit);
-		for (int index = 1; index <= limit; index++) {
-			// Checking proper divisible or not
-			if (number % index == 0) {
-				if (properDivisor.contains(index)) {
-					break;
-				}
-				properDivisor.add(index);
-				int another = number / index;
-				if (another != number) {
-					properDivisor.add(another);
-				}
-			}
-		}
-		return properDivisor;
-	}
 }
