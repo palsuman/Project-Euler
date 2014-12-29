@@ -33,9 +33,9 @@ public class Problem021 implements EulerProblem {
 				continue;
 			}
 			List<Integer> properDivisor = Function.getProperDivisors(number);
-			int amicableNo = getSumOfNumbers(properDivisor);
+			int amicableNo = Function.getSumOfNumbers(properDivisor);
 			properDivisor = Function.getProperDivisors(amicableNo);
-			int sumOfDivisors = getSumOfNumbers(properDivisor);
+			int sumOfDivisors = Function.getSumOfNumbers(properDivisor);
 			if (sumOfDivisors == number && amicableNo != number) {
 				amicableNumbers[number] = true;
 				amicableNumbers[amicableNo] = true;
@@ -43,14 +43,6 @@ public class Problem021 implements EulerProblem {
 			}
 		}
 		return sumOfAmicableNumbers;
-	}
-
-	private int getSumOfNumbers(List<Integer> properDivisor) {
-		int sum = 0;
-		for (Integer value : properDivisor) {
-			sum += value;
-		}
-		return sum;
 	}
 
 }

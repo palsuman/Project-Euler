@@ -278,7 +278,7 @@ public class Function {
 	public static BigInteger getCombinations(BigInteger n, BigInteger r) {
 		return getFactorial(n).divide(
 				getFactorial(r).multiply(getFactorial(n.subtract(r))));
-		
+
 	}
 
 	/**
@@ -296,10 +296,12 @@ public class Function {
 		}
 		return factorial;
 	}
-	
+
 	/**
 	 * Get the list of proper divisor
-	 * @param number the number
+	 * 
+	 * @param number
+	 *            the number to be calculated
 	 * @return the list of proper divisor
 	 */
 	public static List<Integer> getProperDivisors(int number) {
@@ -319,5 +321,32 @@ public class Function {
 			}
 		}
 		return properDivisor;
+	}
+
+	/**
+	 * Get the sum of numbers
+	 * 
+	 * @param numbers
+	 *            the list of number
+	 * @return the sum of numbers
+	 */
+	public static int getSumOfNumbers(List<Integer> numbers) {
+		int sum = 0;
+		for (Integer value : numbers) {
+			sum += value;
+		}
+		return sum;
+	}
+
+	/**
+	 * Check the number is abundant or not
+	 * 
+	 * @param number
+	 *            the number to be checked
+	 * @return true if number is abundant, false otherwise
+	 */
+	public static boolean isAbundantNumber(long number) {
+		boolean status = false;
+		return status;
 	}
 }
