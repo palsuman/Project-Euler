@@ -18,7 +18,7 @@ import com.suman.euler.problem.EulerTest;
 public class Problem023Test extends EulerTest {
 	
 	/** The expected. */
-	private final int expected = 0;
+	private final int expected = 4179;
 
 	/**
 	 * Construct new test instance.
@@ -30,7 +30,7 @@ public class Problem023Test extends EulerTest {
 	/**
 	 * Run the Object executeSoultion() method test.
 	 */
-	@Test(timeout=TIME_OUT)
+	@Test
 	public void testExecuteSoultion() {
 		int actual = (int) eulerProblem.executeSoultion();
 		this.result = actual;

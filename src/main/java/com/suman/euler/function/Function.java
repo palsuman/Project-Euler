@@ -315,7 +315,8 @@ public class Function {
 				}
 				properDivisor.add(index);
 				int another = number / index;
-				if (another != number) {
+				if (another != number && another != index) {
+				
 					properDivisor.add(another);
 				}
 			}
