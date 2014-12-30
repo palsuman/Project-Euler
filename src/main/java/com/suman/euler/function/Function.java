@@ -298,6 +298,22 @@ public class Function {
 	}
 
 	/**
+	 * To get the factorial of a integer number
+	 * 
+	 * @param number
+	 *            the number to be calculated
+	 * @return the factorial of the number
+	 */
+	public static int getFactorial(int number) {
+		int factorial = 1;
+		while (number > 1) {
+			factorial = factorial* number;
+			number = number - 1;
+		}
+		return factorial;
+	}
+	
+	/**
 	 * Get the list of proper divisor
 	 * 
 	 * @param number
@@ -403,5 +419,15 @@ public class Function {
 			status = true;
 		}
 		return status;
+	}
+	
+	public static void main(String[] args) {
+		//int n = 6;
+		double PHI = (1 + Math.sqrt(5)) / 2;
+		for(int n=1; n<10;n++){
+			double result = Math.ceil(Math.pow(PHI, n) / Math.sqrt(5) + 1/2);
+			System.out.print(result + ", ");
+		}
+		System.out.println();
 	}
 }

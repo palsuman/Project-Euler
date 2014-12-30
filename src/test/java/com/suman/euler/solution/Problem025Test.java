@@ -8,23 +8,23 @@ import com.suman.euler.problem.EulerTest;
 
 // TODO: Auto-generated Javadoc
 /**
- * The class <code>Problem023Test</code> contains tests for the class {@link <code>Problem023</code>}.
+ * The class <code>Problem025Test</code> contains tests for the class {@link <code>Problem025</code>}.
  *
  * @author icteas
  * @version $Revision$
  * @pattern JUnit Test Case
  * @generatedBy CodePro at 19/12/14 2:40 PM
  */
-public class Problem023Test extends EulerTest {
+public class Problem025Test extends EulerTest {
 	
 	/** The expected. */
-	private final int expected = 4179871;
+	private final int expected = 4782;
 
 	/**
 	 * Construct new test instance.
 	 */
-	public Problem023Test() {
-		super(new Problem023());
+	public Problem025Test() {
+		super(new Problem025());
 	}
 
 	/**

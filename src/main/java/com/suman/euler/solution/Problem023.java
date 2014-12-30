@@ -43,14 +43,12 @@ public class Problem023 implements EulerProblem {
 				abundants.add(index);
 			}
 		}
-		System.out.println("sumOf2Abundant");
 		int abundantSize = abundants.size();
 		for (int iIndex=0;iIndex<abundantSize;iIndex++ ) {
 			for (int jIndex =0;jIndex<abundantSize;jIndex++) {
 				int sumOf2Abundant = abundants.get(iIndex) + abundants.get(jIndex);
 				if (sumOf2Abundant <= GREATEST_ABUNDANT_NO) {
 					isSumOf2Abundant[sumOf2Abundant] = true;
-					//System.out.println(sumOf2Abundant + " ");
 				}
 			}
 		}
