@@ -26,23 +26,18 @@ public class Problem003 implements EulerProblem {
 			long endRange = number;
 			long startRange = endRange - Function.MAX_DIFFERENCE;
 			startRange = startRange < 2 ? 2 : startRange;
-			try {
-				List<Long> primeSequence = Function.getPrimeSequence(
-						startRange, endRange);
-				int startIndex = primeSequence.size() - 1;
-				for (int index = startIndex; index >= 0; index--) {
-					long primeNumber = primeSequence.get(index);
-					if (maxNumber % primeNumber == 0) {
-						primeFactor = primeNumber;
-						gotPrimeFactor = true;
-						break;
-					}
-				}
-				if(gotPrimeFactor){
+			List<Long> primeSequence = Function.getPrimeSequence(startRange, endRange);
+			int startIndex = primeSequence.size() - 1;
+			for (int index = startIndex; index >= 0; index--) {
+				long primeNumber = primeSequence.get(index);
+				if (maxNumber % primeNumber == 0) {
+					primeFactor = primeNumber;
+					gotPrimeFactor = true;
 					break;
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
+			}
+			if (gotPrimeFactor) {
+				break;
 			}
 		}
 		return primeFactor;

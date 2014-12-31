@@ -76,8 +76,7 @@ public class Function {
 		}
 		while (oddNumberSequence.size() != 0) {
 			int expectedPrimeNumber = oddNumberSequence.remove(0);
-			List<Integer> workingNaturalNumberSequence = new ArrayList<>(
-					oddNumberSequence);
+			List<Integer> workingNaturalNumberSequence = new ArrayList<>(oddNumberSequence);
 			for (int number : workingNaturalNumberSequence) {
 				if (number % expectedPrimeNumber == 0) {
 					oddNumberSequence.remove(number);
@@ -121,14 +120,13 @@ public class Function {
 	 * @param endRange
 	 *            the end range
 	 * @return the prime sequence
-	 * @throws Exception
+	 * @throws IllegalArgumentException
 	 *             if the difference between start range and end range should be
 	 *             less than or equal to {@link Function}.MAX_DIFFERENCE
 	 */
-	public static List<Long> getPrimeSequence(long startRange, long endRange)
-			throws Exception {
+	public static List<Long> getPrimeSequence(long startRange, long endRange) {
 		if (endRange - startRange > MAX_DIFFERENCE) {
-			throw new Exception(
+			throw new IllegalArgumentException(
 					"The difference between start range and end range should be less than or equlal to "
 							+ MAX_DIFFERENCE);
 		}
@@ -276,8 +274,7 @@ public class Function {
 	 * @return the combination of nCr
 	 */
 	public static BigInteger getCombinations(BigInteger n, BigInteger r) {
-		return getFactorial(n).divide(
-				getFactorial(r).multiply(getFactorial(n.subtract(r))));
+		return getFactorial(n).divide(getFactorial(r).multiply(getFactorial(n.subtract(r))));
 
 	}
 
@@ -307,12 +304,12 @@ public class Function {
 	public static int getFactorial(int number) {
 		int factorial = 1;
 		while (number > 1) {
-			factorial = factorial* number;
+			factorial = factorial * number;
 			number = number - 1;
 		}
 		return factorial;
 	}
-	
+
 	/**
 	 * Get the list of proper divisor
 	 * 
@@ -327,12 +324,12 @@ public class Function {
 			// Checking proper divisible or not
 			if (number % index == 0) {
 				if (properDivisor.contains(index)) {
-					continue;	
+					continue;
 				}
 				properDivisor.add(index);
 				int another = number / index;
 				if (another != number && another != index) {
-				
+
 					properDivisor.add(another);
 				}
 			}
@@ -420,12 +417,12 @@ public class Function {
 		}
 		return status;
 	}
-	
+
 	public static void main(String[] args) {
-		//int n = 6;
+		// int n = 6;
 		double PHI = (1 + Math.sqrt(5)) / 2;
-		for(int n=1; n<10;n++){
-			double result = Math.ceil(Math.pow(PHI, n) / Math.sqrt(5) + 1/2);
+		for (int n = 1; n < 10; n++) {
+			double result = Math.ceil(Math.pow(PHI, n) / Math.sqrt(5) + 1 / 2);
 			System.out.print(result + ", ");
 		}
 		System.out.println();
