@@ -35,10 +35,9 @@ public class Problem014 implements EulerProblem {
 		int maxTerms = 1;
 		int finalCollatzNo = 2;
 		collatzTerms[2] = 1;
-		START_LOOP: for (int index = 3; index < COLLATZ_RANGE; index++) {
+		for (int index = 3; index < COLLATZ_RANGE; index++) {
 			long collatzNo = index;
 			int terms = 0;
-			boolean infinite = false;
 			while (collatzNo != 1) {
 				if (collatzNo % 2 == 0) {
 					collatzNo = forEvenCollatz(collatzNo);
@@ -50,9 +49,6 @@ public class Problem014 implements EulerProblem {
 					terms += collatzTerms[(int) collatzNo];
 					collatzNo = 1;
 				}
-			}
-			if (infinite) {
-				continue START_LOOP;
 			}
 			collatzTerms[index] = terms;
 			if (terms > maxTerms) {
