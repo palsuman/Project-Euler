@@ -46,9 +46,7 @@ public class Problem017 implements EulerProblem {
 			numberStr.append(THOUSAND);
 			number = number % 1000;
 			if (number != 0) {
-				numberStr.append(SPACE);
-				numberStr.append(AND);
-				numberStr.append(SPACE);
+				appendAnd(numberStr);
 			}
 		}
 		if (number != 0) {
@@ -59,15 +57,19 @@ public class Problem017 implements EulerProblem {
 				numberStr.append(SPACE);
 				numberStr.append(HUNDRED);
 				if (number != 0) {
-					numberStr.append(SPACE);
-					numberStr.append(AND);
-					numberStr.append(SPACE);
+					appendAnd(numberStr);
 				}
 			}
 			numberStr.append(numberToWord(number));
 		}
 
 		return numberStr.toString();
+	}
+
+	private void appendAnd(StringBuilder numberStr) {
+		numberStr.append(SPACE);
+		numberStr.append(AND);
+		numberStr.append(SPACE);
 	}
 
 	private int getNoOfLetters(String numberInWord) {
