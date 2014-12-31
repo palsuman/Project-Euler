@@ -45,9 +45,7 @@ public class Problem017 implements EulerProblem {
 			numberStr.append(SPACE);
 			numberStr.append(THOUSAND);
 			number = number % 1000;
-			if (number != 0) {
-				appendAnd(numberStr);
-			}
+			appendAnd(number != 0 ? numberStr : null);
 		}
 		if (number != 0) {
 			quotient = number / 100;
@@ -56,9 +54,7 @@ public class Problem017 implements EulerProblem {
 				numberStr.append(numberToWord(quotient));
 				numberStr.append(SPACE);
 				numberStr.append(HUNDRED);
-				if (number != 0) {
-					appendAnd(numberStr);
-				}
+				appendAnd(number != 0 ? numberStr : null);
 			}
 			numberStr.append(numberToWord(number));
 		}
@@ -67,9 +63,11 @@ public class Problem017 implements EulerProblem {
 	}
 
 	private void appendAnd(StringBuilder numberStr) {
-		numberStr.append(SPACE);
-		numberStr.append(AND);
-		numberStr.append(SPACE);
+		if (numberStr != null) {
+			numberStr.append(SPACE);
+			numberStr.append(AND);
+			numberStr.append(SPACE);
+		}
 	}
 
 	private int getNoOfLetters(String numberInWord) {
@@ -150,16 +148,16 @@ public class Problem017 implements EulerProblem {
 				word.append("Eleven");
 				break;
 			case 12:
-				word.append("Twelve");              
-				break;                              
-			case 13:                                
-				word.append("Thirteen");            
-				break;                              
-			case 14:                                
-				word.append("Fourteen");            
-				break;                              
-			case 15:                                
-				word.append("Fifteen");             
+				word.append("Twelve");
+				break;
+			case 13:
+				word.append("Thirteen");
+				break;
+			case 14:
+				word.append("Fourteen");
+				break;
+			case 15:
+				word.append("Fifteen");
 				break;
 			case 16:
 				word.append("Sixteen");
