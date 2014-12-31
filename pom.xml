@@ -17,24 +17,18 @@
 
 
 	<dependencies>
-
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
-
-
 
 	<build>
 		<plugins>
@@ -43,7 +37,7 @@
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>2.1.0</version>
 				<configuration>
-					<repoToken>32hUrw5WgvxnZkJ3tX3eh8sBQ7viDH05J</repoToken>
+					<repoToken>PSNkYQwPgLPj5ixGKP6L</repoToken>
 				</configuration>
 			</plugin>
 
