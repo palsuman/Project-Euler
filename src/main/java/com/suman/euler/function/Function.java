@@ -53,11 +53,7 @@ public class Function {
 	 * @return true, if is odd
 	 */
 	public static boolean isOdd(int number) {
-		boolean odd = false;
-		if (number % 2 != 0) {
-			odd = true;
-		}
-		return odd;
+		return !isEven(number);
 	}
 
 	/**
