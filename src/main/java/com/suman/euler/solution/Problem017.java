@@ -33,7 +33,6 @@ public class Problem017 implements EulerProblem {
 			String numberInWord = convertNumberInWord(index);
 			int noOfLetters = getNoOfLetters(numberInWord);
 			sumOfLetters += noOfLetters;
-			//System.out.println("#" + index + "\tLetters: " + noOfLetters + "\tTotal: " + sumOfLetters + " \tWords: " + numberInWord + "\n");
 		}
 		return sumOfLetters;
 	}
@@ -41,21 +40,16 @@ public class Problem017 implements EulerProblem {
 	private String convertNumberInWord(int number) {
 		StringBuilder numberStr = new StringBuilder();
 		int quotient = number / 1000;
-		boolean isAnd = false;
 		if (quotient != 0) {
 			numberStr.append(numberToWord(quotient));
 			numberStr.append(SPACE);
 			numberStr.append(THOUSAND);
 			number = number % 1000;
 			if (number != 0) {
-				isAnd = true;
+				numberStr.append(SPACE);
+				numberStr.append(AND);
+				numberStr.append(SPACE);
 			}
-		}
-		if (isAnd) {
-			isAnd = false;
-			numberStr.append(SPACE);
-			numberStr.append(AND);
-			numberStr.append(SPACE);
 		}
 		if (number != 0) {
 			quotient = number / 100;
