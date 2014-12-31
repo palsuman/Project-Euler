@@ -26,6 +26,7 @@ import com.suman.euler.problem.EulerProblem;
 public class Problem014 implements EulerProblem {
 
 	private final int COLLATZ_RANGE = 1000000;
+
 	/**
 	 * @see com.suman.euler.problem.EulerProblem#executeSoultion()
 	 */
@@ -34,27 +35,27 @@ public class Problem014 implements EulerProblem {
 		int maxTerms = 1;
 		int finalCollatzNo = 2;
 		collatzTerms[2] = 1;
-		for(int index = 3; index < COLLATZ_RANGE; index++){
+		START_LOOP: for (int index = 3; index < COLLATZ_RANGE; index++) {
 			long collatzNo = index;
 			int terms = 0;
 			boolean infinite = false;
-			while(collatzNo != 1){
-				if(collatzNo % 2 == 0){
+			while (collatzNo != 1) {
+				if (collatzNo % 2 == 0) {
 					collatzNo = forEvenCollatz(collatzNo);
 				} else {
 					collatzNo = forOddCollatz(collatzNo);
 				}
 				++terms;
-				if(collatzNo < COLLATZ_RANGE && collatzTerms[(int)collatzNo] != 0){
-					terms += collatzTerms[(int)collatzNo];
+				if (collatzNo < COLLATZ_RANGE && collatzTerms[(int) collatzNo] != 0) {
+					terms += collatzTerms[(int) collatzNo];
 					collatzNo = 1;
 				}
 			}
-			if(infinite){
-				continue;
+			if (infinite) {
+				continue START_LOOP;
 			}
 			collatzTerms[index] = terms;
-			if(terms > maxTerms) {
+			if (terms > maxTerms) {
 				maxTerms = terms;
 				finalCollatzNo = index;
 			}
@@ -62,11 +63,11 @@ public class Problem014 implements EulerProblem {
 		return finalCollatzNo;
 	}
 
-	private long forEvenCollatz(long number){
-		return number/2;
+	private long forEvenCollatz(long number) {
+		return number / 2;
 	}
-	
-	private long forOddCollatz(long number){
-		return ((3*number)+1);
+
+	private long forOddCollatz(long number) {
+		return ((3 * number) + 1);
 	}
 }
