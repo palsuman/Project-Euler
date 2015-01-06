@@ -18,7 +18,7 @@ Requirements
 Build
 -----------
 
-mvn clean install package && cd target && java -jar superman-1.0.jar && cd ..
+mvn clean install package && cd target && java -jar project-euler-1.0.jar && cd ..
 
 Build Status
 ------------
