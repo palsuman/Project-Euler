@@ -8,23 +8,23 @@ import com.suman.euler.problem.EulerTest;
 
 
 /**
- * The class <code>Problem012Test</code> contains tests for the class {@link <code>Problem012</code>}.
+ * The class <code>Problem029Test</code> contains tests for the class {@link <code>Problem029</code>}.
  *
  * @author Suman Pal
  * @version $Revision$
  * @pattern JUnit Test Case
  * @generatedBy CodePro at 19/12/14 2:40 PM
  */
-public class Problem012Test extends EulerTest {
+public class Problem029Test extends EulerTest {
 	
 	/** The expected. */
-	private final long expected = 76576500L;
+	private final Integer expected = 9183;
 
 	/**
 	 * Construct new test instance.
 	 */
-	public Problem012Test() {
-		super(new Problem012());
+	public Problem029Test() {
+		super(new Problem029());
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class Problem012Test extends EulerTest {
 	 */
 	@Test(timeout=TIME_OUT)
 	public void testExecuteSoultion() {
-		long actual = (long) eulerProblem.executeSoultion();
+		Integer actual = (Integer) eulerProblem.executeSoultion();
 		this.result = actual;
 		assertEquals(expected, actual);
 	}

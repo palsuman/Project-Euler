@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class CreateProblemAndTestClass {
-	private static final String PROBLEM_NO = "028";
+	private static final String PROBLEM_NO = "030";
 
 	public static void main(String[] args) {
 		try {
@@ -70,10 +70,10 @@ public class CreateProblemAndTestClass {
 			+ "\n"
 			+ "import com.suman.euler.problem.EulerTest;\n"
 			+ "\n"
-			+ "// TODO: Auto-generated Javadoc\n"
+			+ "\n"
 			+ "/**\n"
 			+ " * The class <code><@PROBLEM_TEST_NAME@></code> contains tests for the class {@link <code><@PROBLEM_NAME@></code>}.\n"
-			+ " *\n" + " * @author icteas\n" + " * @version $Revision$\n" + " * @pattern JUnit Test Case\n"
+			+ " *\n" + " * @author Suman Pal\n" + " * @version $Revision$\n" + " * @pattern JUnit Test Case\n"
 			+ " * @generatedBy CodePro at 19/12/14 2:40 PM\n" + " */\n"
 			+ "public class <@PROBLEM_TEST_NAME@> extends EulerTest {\n" + "	\n" + "	/** The expected. */\n"
 			+ "	private final Object expected = new Object();\n" + "\n" + "	/**\n"

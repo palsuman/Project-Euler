@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import com.suman.euler.problem.EulerTest;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The class <code>Problem006Test</code> contains tests for the class {@link <code>Problem006</code>}
  * .
  *
- * @author icteas
+ * @author Suman Pal
  * @version $Revision$
  * @pattern JUnit Test Case
  * @generatedBy CodePro at 19/12/14 2:40 PM

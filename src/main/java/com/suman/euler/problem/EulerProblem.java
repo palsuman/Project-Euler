@@ -1,6 +1,6 @@
 package com.suman.euler.problem;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Interface EulerProblem.
  */

@@ -3,7 +3,7 @@ package com.suman.euler.problem;
 import org.junit.After;
 import org.junit.Before;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class EulerTest.
  */
